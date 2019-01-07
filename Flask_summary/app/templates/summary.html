@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+{% block content %}  
+
+  <h3>{{ page_title }}</h3>
+	<table>
+		<tr>
+			<th>Sentence No.</th>
+			<th>Summary Sentences</th>
+		</tr>
+		{% for line in doc_summary %}
+		<tr>
+			<th>{{ loop.index }}</th>
+			<td>{{ line }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+{% endblock %}

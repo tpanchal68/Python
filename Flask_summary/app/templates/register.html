@@ -1,0 +1,28 @@
+{% extends "base_generic.html" %}
+{% block content %}  
+
+	<form action="{{ url_for('register') }}" method=post>
+		<fieldset>
+			<legend>Registration Form</legend>
+			{{ form.hidden_tag() }}
+			{{ form.firstname.label }}<br>
+			{{ form.firstname }}
+			<br>
+			{{ form.lastname.label }}<br>
+			{{ form.lastname }}
+			<br>
+			{{ form.email.label }}<br>
+			{{ form.email }}
+			<br>
+			{{ form.password.label }}<br>
+			{{ form.password }}
+			<br>
+			{{ form.confirm.label }}<br>
+			{{ form.confirm }}
+			<br>
+            <br>
+				<input class="btn btn-primary" type="submit" value="Register">
+		    <br>
+		</fieldset>
+
+{% endblock %}

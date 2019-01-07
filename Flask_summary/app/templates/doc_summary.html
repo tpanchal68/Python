@@ -1,0 +1,59 @@
+{% extends "base_generic.html" %}
+{% block content %}
+
+	<form action="{{ url_for('summary') }}" method="post" enctype="multipart/form-data">
+		<div class="home">
+			<div class="home-screen">
+			<div class="app-title">
+				<h1>Document Summarizer</h1>
+			</div>
+				<div class="home-form">
+					<div class="quantity">
+						<p>
+						<label>Summary Lines:</label>
+						<input type="number" name="sum_sentences" value="3" min="1" max="50" step="1"></p>
+					</div>
+					<div class="algorithm-group">
+						<p>
+						<label>Algorithm:</label>
+						<ul>
+						<li><input type="radio" name="algorithmVar" value="LSA_Text_Summarizer">LSA Text Summarizer</li>
+						<li><input type="radio" name="algorithmVar" value="TextRank_Text_Summarizer" checked>TextRank Text Summarizer</li>
+						<li><input type="radio" name="algorithmVar" value="Sumy_Text_Summarizer">Sumy Text Summarizer</li>
+						</ul></p>
+					</div>
+
+					<div class="textOption-group">
+						<p>
+						<label>Text Input Options:</label>
+						<ul>
+						<li><input type="radio" name="textOptionVar" value="url" checked onclick="urlFunction()">URL</li>
+						<li><input type="radio" name="textOptionVar" value="file_select" onclick="fileFunction()">Document (.docx, .pdf or .txt)</li>
+						</ul></p>
+					</div>
+
+					<div id="url-group">
+						<p>
+						<label>Enter URL:</label>
+						<ul>
+						<input type="text" name="urlText" value="https://www.yahoo.com/news/two-indian-miners-dead-accident-fate-missing-15-062828953.html">
+						</ul></p>
+					</div>
+
+					<div id="file-group">
+						<p>
+						<label>Select File:</label>
+						<ul>
+						<input type="file" name="file" accept=".txt,.pdf,.doc,.docx">
+						</ul></p>
+					</div>
+	 
+	                <br>
+					<input type="submit" value="Submit" class="btn" >
+				    <br>
+				</div>
+			</div>
+		</div>
+	</form>
+
+{% endblock %}

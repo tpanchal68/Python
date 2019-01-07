@@ -1,0 +1,132 @@
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.navbar-inverse {
+    background-color: #3498DB !important;
+}
+
+.nav.navbar-nav li a,
+.nav.navbar-nav.navbar-right li a {
+    color: #000000;
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  padding: 7px 15px;
+  height: 100%;
+  width: auto;
+}
+
+/*-- change navbar dropdown color --*/
+.dropdown-menu li a {
+    background-color: #3498DB;
+    color: #000000;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;} 
+}
+
+/* Form input field CSS */
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+input[type="file"],
+input[type="text"] {
+    width: 350px;
+	-webkit-transition: width .35s ease-in-out;
+	transition: width .35s ease-in-out;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid lightblue;
+    border-radius: 4px;
+}
+
+input[type="text"]:focus {
+	width: 100%;
+}
+
+.btn {
+  border: 2px solid transparent;
+  background: #3498DB;
+  color: #000000;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+}
+ 
+.btn:hover {
+  background-color: #2980B9;
+}
+
+#file-group {
+  display: none;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+th {
+  height: 50px;
+  text-align: left;
+  background-color: #3498DB;
+  color: white;
+}
+
+td {
+  height: 50px;
+  vertical-align: bottom;
+}
+
+th, td {
+  padding: 5px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
